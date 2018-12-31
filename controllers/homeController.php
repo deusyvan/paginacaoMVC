@@ -10,6 +10,10 @@ class homeController extends controller {
     public function index() {
         $data = array();
         
+        $itens = new Itens();
+        
+        $data['lista'] = $itens->getList();
+        
         $this->loadTemplate('home', $data);
     }
     
