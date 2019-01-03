@@ -21,6 +21,11 @@ class homeController extends controller {
         
         $data['paginaAtual'] = 1;
         
+        //Verificando se foi enviado a variavel da página
+        if(!empty($_GET['p'])){
+            $data['paginaAtual'] = intval($_GET['p']);//Transformando todo valor de p em um inteiro por segurança
+        }
+        
         $offset = ($data['paginaAtual'] * $limit) - $limit;
         
         $data['lista'] = $itens->getList($offset, $limit);
