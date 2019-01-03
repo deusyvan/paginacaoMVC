@@ -12,7 +12,6 @@ class homeController extends controller {
         
         $itens = new Itens();
         
-        $offset = 0;
         $limit = 10;
         
         $total = $itens->getTotal();
