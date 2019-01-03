@@ -15,6 +15,8 @@ class homeController extends controller {
         $offset = 0;
         $limit = 10;
         
+        $total = $itens->getTotal();
+        
         $data['lista'] = $itens->getList($offset, $limit);
         
         $this->loadTemplate('home', $data);
