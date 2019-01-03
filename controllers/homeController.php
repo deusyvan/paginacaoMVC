@@ -17,6 +17,8 @@ class homeController extends controller {
         
         $total = $itens->getTotal();
         
+        $data['paginas'] = ceil($total/$limit);//arredondanto pra cima
+        
         $data['lista'] = $itens->getList($offset, $limit);
         
         $this->loadTemplate('home', $data);

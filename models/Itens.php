@@ -16,7 +16,7 @@ class  Itens extends model{
     public function getTotal(){
         $sql = "SELECT COUNT(*) AS c FROM itens";
         $sql = $this->db->query($sql);
-        $sql = $sql->fetchAll();
+        $sql = $sql->fetch();
         
         return $sql['c'];
     }
