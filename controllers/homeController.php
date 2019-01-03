@@ -12,7 +12,10 @@ class homeController extends controller {
         
         $itens = new Itens();
         
-        $data['lista'] = $itens->getList();
+        $offset = 0;
+        $limit = 10;
+        
+        $data['lista'] = $itens->getList($offset, $limit);
         
         $this->loadTemplate('home', $data);
     }

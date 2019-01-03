@@ -2,10 +2,10 @@
 
 class  Itens extends model{
     
-    public function getList(){
+    public function getList($offset, $limit){
         $array = array();
         
-        $sql = "SELECT * FROM itens";
+        $sql = "SELECT * FROM itens LIMIT $offset, $limit";
         $sql = $this->db->query($sql);
         
             $array = $sql->fetchAll();
