@@ -12,6 +12,10 @@
 </table>
 
 <?php for ($q=1;$q<=$paginas;$q++): ?>
-<a href="<?php echo BASE_URL; ?>?p=<?php echo $q; ?>"><?php echo $q; ?></a>
+    <?php if ($paginaAtual == $q): ?>
+    
+    <?php else: ?>
+    	<a href="<?php echo BASE_URL; ?>?p=<?php echo $q; ?>"><?php echo $q; ?></a>
+    <?php endif; ?>
 <?php endfor; ?>
 
