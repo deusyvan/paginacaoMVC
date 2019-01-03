@@ -19,6 +19,10 @@ class homeController extends controller {
         
         $data['paginas'] = ceil($total/$limit);//arredondanto pra cima
         
+        $data['paginaAtual'] = 1;
+        
+        $offset = ($data['paginaAtual'] * $limit) - $limit;
+        
         $data['lista'] = $itens->getList($offset, $limit);
         
         $this->loadTemplate('home', $data);
