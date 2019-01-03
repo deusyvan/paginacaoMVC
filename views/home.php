@@ -13,7 +13,7 @@
 
 <?php for ($q=1;$q<=$paginas;$q++): ?>
     <?php if ($paginaAtual == $q): ?>
-    
+    	<a href="<?php echo BASE_URL; ?>?p=<?php echo $q; ?>"><strong><?php echo $q; ?></strong></a>
     <?php else: ?>
     	<a href="<?php echo BASE_URL; ?>?p=<?php echo $q; ?>"><?php echo $q; ?></a>
     <?php endif; ?>
